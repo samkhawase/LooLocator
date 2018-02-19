@@ -13,6 +13,10 @@
 		229B3298203455CA0098E456 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 229B3297203455CA0098E456 /* Assets.xcassets */; };
 		229B329B203455CA0098E456 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 229B3299203455CA0098E456 /* LaunchScreen.storyboard */; };
 		229B32A6203455CA0098E456 /* OpenStreetAmenitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229B32A5203455CA0098E456 /* OpenStreetAmenitiesTests.swift */; };
+		229B32B3203457AC0098E456 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 229B32B1203457AC0098E456 /* Nimble.framework */; };
+		229B32B4203457AC0098E456 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 229B32B2203457AC0098E456 /* Quick.framework */; };
+		229B32B6203457CE0098E456 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 229B32B1203457AC0098E456 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		229B32B7203457CE0098E456 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 229B32B2203457AC0098E456 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +29,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		229B32B5203457C50098E456 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				229B32B6203457CE0098E456 /* Nimble.framework in CopyFiles */,
+				229B32B7203457CE0098E456 /* Quick.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		229B328D203455CA0098E456 /* OpenStreetAmenities.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenStreetAmenities.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		229B3290203455CA0098E456 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +54,8 @@
 		229B32A1203455CA0098E456 /* OpenStreetAmenitiesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenStreetAmenitiesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		229B32A5203455CA0098E456 /* OpenStreetAmenitiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenStreetAmenitiesTests.swift; sourceTree = "<group>"; };
 		229B32A7203455CA0098E456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		229B32B1203457AC0098E456 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		229B32B2203457AC0098E456 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				229B32B3203457AC0098E456 /* Nimble.framework in Frameworks */,
+				229B32B4203457AC0098E456 /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +84,7 @@
 				229B328F203455CA0098E456 /* OpenStreetAmenities */,
 				229B32A4203455CA0098E456 /* OpenStreetAmenitiesTests */,
 				229B328E203455CA0098E456 /* Products */,
+				229B32B0203457AC0098E456 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +119,15 @@
 			path = OpenStreetAmenitiesTests;
 			sourceTree = "<group>";
 		};
+		229B32B0203457AC0098E456 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				229B32B1203457AC0098E456 /* Nimble.framework */,
+				229B32B2203457AC0098E456 /* Quick.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -123,6 +155,7 @@
 				229B329D203455CA0098E456 /* Sources */,
 				229B329E203455CA0098E456 /* Frameworks */,
 				229B329F203455CA0098E456 /* Resources */,
+				229B32B5203457C50098E456 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -386,6 +419,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CWXKC246LH;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = OpenStreetAmenitiesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.sam.OpenStreetAmenitiesTests;
@@ -403,6 +440,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CWXKC246LH;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = OpenStreetAmenitiesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.sam.OpenStreetAmenitiesTests;
