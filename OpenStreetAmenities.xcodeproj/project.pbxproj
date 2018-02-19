@@ -7,16 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22801B3A2035B0F100D4C2D2 /* LocationMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22801B392035B0F100D4C2D2 /* LocationMocks.swift */; };
+		22801B3C2035B1E000D4C2D2 /* LocationProvidable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22801B3B2035B1E000D4C2D2 /* LocationProvidable.swift */; };
+		22801B3E2035B20100D4C2D2 /* LocationManagerConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22801B3D2035B20100D4C2D2 /* LocationManagerConfigurable.swift */; };
+		22801B412035B25500D4C2D2 /* CLLocationManagerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22801B402035B25500D4C2D2 /* CLLocationManagerExtension.swift */; };
+		22801B552035BEC400D4C2D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22801B532035BEC400D4C2D2 /* LaunchScreen.storyboard */; };
+		22801B562035BEC400D4C2D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22801B542035BEC400D4C2D2 /* Main.storyboard */; };
 		229B3291203455CA0098E456 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229B3290203455CA0098E456 /* AppDelegate.swift */; };
 		229B3293203455CA0098E456 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229B3292203455CA0098E456 /* ViewController.swift */; };
-		229B3296203455CA0098E456 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 229B3294203455CA0098E456 /* Main.storyboard */; };
 		229B3298203455CA0098E456 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 229B3297203455CA0098E456 /* Assets.xcassets */; };
-		229B329B203455CA0098E456 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 229B3299203455CA0098E456 /* LaunchScreen.storyboard */; };
 		229B32A6203455CA0098E456 /* OpenStreetAmenitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229B32A5203455CA0098E456 /* OpenStreetAmenitiesTests.swift */; };
 		229B32B3203457AC0098E456 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 229B32B1203457AC0098E456 /* Nimble.framework */; };
 		229B32B4203457AC0098E456 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 229B32B2203457AC0098E456 /* Quick.framework */; };
 		229B32B6203457CE0098E456 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 229B32B1203457AC0098E456 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		229B32B7203457CE0098E456 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 229B32B2203457AC0098E456 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		229B32BA203459660098E456 /* AmenityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229B32B9203459660098E456 /* AmenityViewModel.swift */; };
+		229B32BC203460AE0098E456 /* LocationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229B32BB203460AE0098E456 /* LocationProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,18 +50,24 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		22801B392035B0F100D4C2D2 /* LocationMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMocks.swift; sourceTree = "<group>"; };
+		22801B3B2035B1E000D4C2D2 /* LocationProvidable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationProvidable.swift; sourceTree = "<group>"; };
+		22801B3D2035B20100D4C2D2 /* LocationManagerConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerConfigurable.swift; sourceTree = "<group>"; };
+		22801B402035B25500D4C2D2 /* CLLocationManagerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationManagerExtension.swift; sourceTree = "<group>"; };
+		22801B532035BEC400D4C2D2 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		22801B542035BEC400D4C2D2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		229B328D203455CA0098E456 /* OpenStreetAmenities.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenStreetAmenities.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		229B3290203455CA0098E456 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		229B3292203455CA0098E456 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		229B3295203455CA0098E456 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		229B3297203455CA0098E456 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		229B329A203455CA0098E456 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		229B329C203455CA0098E456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		229B32A1203455CA0098E456 /* OpenStreetAmenitiesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenStreetAmenitiesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		229B32A5203455CA0098E456 /* OpenStreetAmenitiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenStreetAmenitiesTests.swift; sourceTree = "<group>"; };
 		229B32A7203455CA0098E456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		229B32B1203457AC0098E456 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		229B32B2203457AC0098E456 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		229B32B9203459660098E456 /* AmenityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmenityViewModel.swift; sourceTree = "<group>"; };
+		229B32BB203460AE0098E456 /* LocationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +90,66 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22801B382035B0E200D4C2D2 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				22801B392035B0F100D4C2D2 /* LocationMocks.swift */,
+			);
+			name = Mocks;
+			sourceTree = "<group>";
+		};
+		22801B462035BA1800D4C2D2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				229B3297203455CA0098E456 /* Assets.xcassets */,
+				229B329C203455CA0098E456 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		22801B4C2035BB9F00D4C2D2 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				22801B4E2035BBC100D4C2D2 /* Implementations */,
+				22801B4D2035BBB900D4C2D2 /* Extensions */,
+				22801B3B2035B1E000D4C2D2 /* LocationProvidable.swift */,
+				22801B3D2035B20100D4C2D2 /* LocationManagerConfigurable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		22801B4D2035BBB900D4C2D2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				22801B402035B25500D4C2D2 /* CLLocationManagerExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		22801B4E2035BBC100D4C2D2 /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				229B32BB203460AE0098E456 /* LocationProvider.swift */,
+			);
+			path = Implementations;
+			sourceTree = "<group>";
+		};
+		22801B502035BE1800D4C2D2 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				229B32B9203459660098E456 /* AmenityViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		22801B512035BE2800D4C2D2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				229B3292203455CA0098E456 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		229B3284203455C90098E456 = {
 			isa = PBXGroup;
 			children = (
@@ -100,12 +172,13 @@
 		229B328F203455CA0098E456 /* OpenStreetAmenities */ = {
 			isa = PBXGroup;
 			children = (
+				22801B532035BEC400D4C2D2 /* LaunchScreen.storyboard */,
+				22801B542035BEC400D4C2D2 /* Main.storyboard */,
 				229B3290203455CA0098E456 /* AppDelegate.swift */,
-				229B3292203455CA0098E456 /* ViewController.swift */,
-				229B3294203455CA0098E456 /* Main.storyboard */,
-				229B3297203455CA0098E456 /* Assets.xcassets */,
-				229B3299203455CA0098E456 /* LaunchScreen.storyboard */,
-				229B329C203455CA0098E456 /* Info.plist */,
+				22801B502035BE1800D4C2D2 /* ViewModels */,
+				22801B4C2035BB9F00D4C2D2 /* Protocols */,
+				22801B462035BA1800D4C2D2 /* Resources */,
+				22801B512035BE2800D4C2D2 /* ViewControllers */,
 			);
 			path = OpenStreetAmenities;
 			sourceTree = "<group>";
@@ -113,6 +186,7 @@
 		229B32A4203455CA0098E456 /* OpenStreetAmenitiesTests */ = {
 			isa = PBXGroup;
 			children = (
+				22801B382035B0E200D4C2D2 /* Mocks */,
 				229B32A5203455CA0098E456 /* OpenStreetAmenitiesTests.swift */,
 				229B32A7203455CA0098E456 /* Info.plist */,
 			);
@@ -212,9 +286,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				229B329B203455CA0098E456 /* LaunchScreen.storyboard in Resources */,
+				22801B562035BEC400D4C2D2 /* Main.storyboard in Resources */,
+				22801B552035BEC400D4C2D2 /* LaunchScreen.storyboard in Resources */,
 				229B3298203455CA0098E456 /* Assets.xcassets in Resources */,
-				229B3296203455CA0098E456 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,7 +307,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				229B3293203455CA0098E456 /* ViewController.swift in Sources */,
+				22801B3E2035B20100D4C2D2 /* LocationManagerConfigurable.swift in Sources */,
+				229B32BC203460AE0098E456 /* LocationProvider.swift in Sources */,
 				229B3291203455CA0098E456 /* AppDelegate.swift in Sources */,
+				229B32BA203459660098E456 /* AmenityViewModel.swift in Sources */,
+				22801B3C2035B1E000D4C2D2 /* LocationProvidable.swift in Sources */,
+				22801B412035B25500D4C2D2 /* CLLocationManagerExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +320,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22801B3A2035B0F100D4C2D2 /* LocationMocks.swift in Sources */,
 				229B32A6203455CA0098E456 /* OpenStreetAmenitiesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,25 +334,6 @@
 			targetProxy = 229B32A2203455CA0098E456 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		229B3294203455CA0098E456 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				229B3295203455CA0098E456 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		229B3299203455CA0098E456 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				229B329A203455CA0098E456 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		229B32A8203455CA0098E456 /* Debug */ = {

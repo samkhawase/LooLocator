@@ -18,5 +18,9 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>We need this information to locate you on the map, in order to find the amenities near you</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We need this information to locate you on the map, in order to find the amenities near you</string>
 </dict>
 </plist>
