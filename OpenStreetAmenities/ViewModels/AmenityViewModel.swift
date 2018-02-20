@@ -9,9 +9,8 @@
 import CoreLocation
 
 protocol MapViewModelConfirming {
-    
     func getCurrentLocation() -> (Double, Double)
-    func getAmenities(in range: Int, type: AmenityType)
+    func getAmenities(in range: Int, type: AmenityType, completion: @escaping CompletionBlock)
 }
 
 protocol MapViewModelObservable {
@@ -27,14 +26,16 @@ enum AmenityType: String {
 }
 
 // MapviewModel: Protocol implementation
-class MapViewModel: MapViewModelConfirming, LocationObservable {
+class MapViewModel<T: AmenityRequest>: MapViewModelConfirming, LocationObservable {
 
     var locationProvider: LocationProvidable
+    var amenityRequest: T
     
     // inject the dependencies in ctor
-    init(locationProvider: LocationProvidable) {
+    init(locationProvider: LocationProvidable, amenityRequest: T) {
         self.locationProvider = locationProvider
         self.locationProvider.startLocationUpdates()
+        self.amenityRequest = amenityRequest
     }
     
     func getCurrentLocation() -> (Double, Double) {
@@ -42,9 +43,17 @@ class MapViewModel: MapViewModelConfirming, LocationObservable {
         return (lat, lon)
     }
     
-    func getAmenities(in range: Int, type: AmenityType) {
-        //TODO:
+    func getAmenities(in range: Int, type: AmenityType, completion: @escaping CompletionBlock) {
+        let (lat, lon) = getCurrentLocation()
+        amenityRequest.getAmeneties(of: AmenityType.Toilets,
+                                    latitude: lat,
+                                    longitude: lon,
+                                    radius: Double(range)) { (success, locations) in
+                                        completion(success, locations)
+        }
     }
+    
+    // This is a message from the location provider
     func setCurrentLocation(latitude: Double, longitude: Double) {
         
     }

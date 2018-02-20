@@ -13,6 +13,14 @@
 		22801B412035B25500D4C2D2 /* CLLocationManagerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22801B402035B25500D4C2D2 /* CLLocationManagerExtension.swift */; };
 		22801B552035BEC400D4C2D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22801B532035BEC400D4C2D2 /* LaunchScreen.storyboard */; };
 		22801B562035BEC400D4C2D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22801B542035BEC400D4C2D2 /* Main.storyboard */; };
+		22801B5A2035E07800D4C2D2 /* ApiResourceProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22801B592035E07800D4C2D2 /* ApiResourceProviding.swift */; };
+		22801B5C2035E10C00D4C2D2 /* NetworkRequestProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22801B5B2035E10B00D4C2D2 /* NetworkRequestProviding.swift */; };
+		22801B5E2035E40A00D4C2D2 /* AmentityResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22801B5D2035E40A00D4C2D2 /* AmentityResource.swift */; };
+		22801B602035E48200D4C2D2 /* AmenityRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22801B5F2035E48200D4C2D2 /* AmenityRequest.swift */; };
+		22801B632035E4EB00D4C2D2 /* RawOSMData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22801B622035E4EB00D4C2D2 /* RawOSMData.swift */; };
+		22801B652035E59300D4C2D2 /* NetworkReqeustProvidingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22801B642035E59300D4C2D2 /* NetworkReqeustProvidingExtension.swift */; };
+		22801B672036209C00D4C2D2 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22801B662036209C00D4C2D2 /* Location.swift */; };
+		22801B692036D9D700D4C2D2 /* AmenityMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22801B682036D9D700D4C2D2 /* AmenityMocks.swift */; };
 		229B3291203455CA0098E456 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229B3290203455CA0098E456 /* AppDelegate.swift */; };
 		229B3293203455CA0098E456 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229B3292203455CA0098E456 /* ViewController.swift */; };
 		229B3298203455CA0098E456 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 229B3297203455CA0098E456 /* Assets.xcassets */; };
@@ -56,6 +64,14 @@
 		22801B402035B25500D4C2D2 /* CLLocationManagerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationManagerExtension.swift; sourceTree = "<group>"; };
 		22801B532035BEC400D4C2D2 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		22801B542035BEC400D4C2D2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		22801B592035E07800D4C2D2 /* ApiResourceProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResourceProviding.swift; sourceTree = "<group>"; };
+		22801B5B2035E10B00D4C2D2 /* NetworkRequestProviding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequestProviding.swift; sourceTree = "<group>"; };
+		22801B5D2035E40A00D4C2D2 /* AmentityResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmentityResource.swift; sourceTree = "<group>"; };
+		22801B5F2035E48200D4C2D2 /* AmenityRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmenityRequest.swift; sourceTree = "<group>"; };
+		22801B622035E4EB00D4C2D2 /* RawOSMData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawOSMData.swift; sourceTree = "<group>"; };
+		22801B642035E59300D4C2D2 /* NetworkReqeustProvidingExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReqeustProvidingExtension.swift; sourceTree = "<group>"; };
+		22801B662036209C00D4C2D2 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		22801B682036D9D700D4C2D2 /* AmenityMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmenityMocks.swift; sourceTree = "<group>"; };
 		229B328D203455CA0098E456 /* OpenStreetAmenities.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenStreetAmenities.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		229B3290203455CA0098E456 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		229B3292203455CA0098E456 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				22801B392035B0F100D4C2D2 /* LocationMocks.swift */,
+				22801B682036D9D700D4C2D2 /* AmenityMocks.swift */,
 			);
 			name = Mocks;
 			sourceTree = "<group>";
@@ -114,6 +131,8 @@
 				22801B4D2035BBB900D4C2D2 /* Extensions */,
 				22801B3B2035B1E000D4C2D2 /* LocationProvidable.swift */,
 				22801B3D2035B20100D4C2D2 /* LocationManagerConfigurable.swift */,
+				22801B5B2035E10B00D4C2D2 /* NetworkRequestProviding.swift */,
+				22801B592035E07800D4C2D2 /* ApiResourceProviding.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -122,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				22801B402035B25500D4C2D2 /* CLLocationManagerExtension.swift */,
+				22801B642035E59300D4C2D2 /* NetworkReqeustProvidingExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -130,6 +150,8 @@
 			isa = PBXGroup;
 			children = (
 				229B32BB203460AE0098E456 /* LocationProvider.swift */,
+				22801B5D2035E40A00D4C2D2 /* AmentityResource.swift */,
+				22801B5F2035E48200D4C2D2 /* AmenityRequest.swift */,
 			);
 			path = Implementations;
 			sourceTree = "<group>";
@@ -148,6 +170,15 @@
 				229B3292203455CA0098E456 /* ViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		22801B612035E4D500D4C2D2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				22801B622035E4EB00D4C2D2 /* RawOSMData.swift */,
+				22801B662036209C00D4C2D2 /* Location.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		229B3284203455C90098E456 = {
@@ -172,6 +203,7 @@
 		229B328F203455CA0098E456 /* OpenStreetAmenities */ = {
 			isa = PBXGroup;
 			children = (
+				22801B612035E4D500D4C2D2 /* Models */,
 				22801B532035BEC400D4C2D2 /* LaunchScreen.storyboard */,
 				22801B542035BEC400D4C2D2 /* Main.storyboard */,
 				229B3290203455CA0098E456 /* AppDelegate.swift */,
@@ -306,12 +338,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22801B5E2035E40A00D4C2D2 /* AmentityResource.swift in Sources */,
+				22801B5C2035E10C00D4C2D2 /* NetworkRequestProviding.swift in Sources */,
+				22801B632035E4EB00D4C2D2 /* RawOSMData.swift in Sources */,
 				229B3293203455CA0098E456 /* ViewController.swift in Sources */,
 				22801B3E2035B20100D4C2D2 /* LocationManagerConfigurable.swift in Sources */,
 				229B32BC203460AE0098E456 /* LocationProvider.swift in Sources */,
+				22801B672036209C00D4C2D2 /* Location.swift in Sources */,
 				229B3291203455CA0098E456 /* AppDelegate.swift in Sources */,
+				22801B5A2035E07800D4C2D2 /* ApiResourceProviding.swift in Sources */,
+				22801B652035E59300D4C2D2 /* NetworkReqeustProvidingExtension.swift in Sources */,
 				229B32BA203459660098E456 /* AmenityViewModel.swift in Sources */,
 				22801B3C2035B1E000D4C2D2 /* LocationProvidable.swift in Sources */,
+				22801B602035E48200D4C2D2 /* AmenityRequest.swift in Sources */,
 				22801B412035B25500D4C2D2 /* CLLocationManagerExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,6 +361,7 @@
 			files = (
 				22801B3A2035B0F100D4C2D2 /* LocationMocks.swift in Sources */,
 				229B32A6203455CA0098E456 /* OpenStreetAmenitiesTests.swift in Sources */,
+				22801B692036D9D700D4C2D2 /* AmenityMocks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

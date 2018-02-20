@@ -6,6 +6,7 @@
 //  Copyright © 2018 OpenStreetAmenities. All rights reserved.
 //
 
+import Foundation
 @testable import OpenStreetAmenities
 
 class MockLocationProvider: LocationProvidable {
