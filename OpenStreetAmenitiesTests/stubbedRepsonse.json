@@ -1,0 +1,180 @@
+{
+    "version": 0.6,
+    "generator": "Overpass API 0.7.54.12 054bb0bb",
+    "osm3s": {
+        "timestamp_osm_base": "2018-02-18T20:06:02Z",
+        "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+    },
+    "elements": [
+                 {
+                 "type": "node",
+                 "id": 66917214,
+                 "lat": 52.5168607,
+                 "lon": 13.3829509,
+                 "tags": {
+                 "amenity": "toilets",
+                 "fee": "yes",
+                 "name": "City Toilette",
+                 "toilets:wheelchair": "yes",
+                 "wheelchair": "yes"
+                 }
+                 },
+                 {
+                 "type": "node",
+                 "id": 71180687,
+                 "lat": 52.5175448,
+                 "lon": 13.3738695,
+                 "tags": {
+                 "amenity": "toilets",
+                 "fee": "yes",
+                 "toilets:wheelchair": "yes",
+                 "wheelchair": "yes",
+                 "wheelchair:description": "Euro-Schlüssel notwendig"
+                 }
+                 },
+                 {
+                 "type": "node",
+                 "id": 304575905,
+                 "lat": 52.5163769,
+                 "lon": 13.3755227,
+                 "tags": {
+                 "amenity": "toilets",
+                 "fee": "yes",
+                 "name": "City Toilette",
+                 "opening_hours": "24/7",
+                 "toilets:wheelchair": "yes",
+                 "wheelchair": "yes"
+                 }
+                 },
+                 {
+                 "type": "node",
+                 "id": 599913127,
+                 "lat": 52.5081387,
+                 "lon": 13.3744541,
+                 "tags": {
+                 "amenity": "toilets",
+                 "layer": "-1",
+                 "operator": "unknown",
+                 "wheelchair": "yes"
+                 }
+                 },
+                 {
+                 "type": "node",
+                 "id": 927092067,
+                 "lat": 52.5141833,
+                 "lon": 13.3914532,
+                 "tags": {
+                 "amenity": "toilets",
+                 "centralkey": "eurokey",
+                 "fee": "yes",
+                 "name": "City Toilette",
+                 "opening_hours": "24/7",
+                 "operator": "Wall",
+                 "toilets:wheelchair": "yes",
+                 "wheelchair": "yes",
+                 "wheelchair:description": "Wall City Toilette"
+                 }
+                 },
+                 {
+                 "type": "node",
+                 "id": 1453830466,
+                 "lat": 52.5226503,
+                 "lon": 13.3720210,
+                 "tags": {
+                 "amenity": "toilets",
+                 "wheelchair": "no"
+                 }
+                 },
+                 {
+                 "type": "node",
+                 "id": 1453886966,
+                 "lat": 52.5225436,
+                 "lon": 13.3708178,
+                 "tags": {
+                 "amenity": "toilets",
+                 "wheelchair": "no"
+                 }
+                 },
+                 {
+                 "type": "node",
+                 "id": 2351691628,
+                 "lat": 52.5165754,
+                 "lon": 13.3811272,
+                 "tags": {
+                 "amenity": "toilets",
+                 "fee": "yes",
+                 "name": "City Toilette",
+                 "toilets:wheelchair": "yes",
+                 "wheelchair": "yes"
+                 }
+                 },
+                 {
+                 "type": "node",
+                 "id": 2378807163,
+                 "lat": 52.5207250,
+                 "lon": 13.3875590,
+                 "tags": {
+                 "amenity": "toilets",
+                 "diaper": "yes",
+                 "fee": "yes",
+                 "female": "yes",
+                 "male": "yes",
+                 "name": "Bahnhof Friedrichstraße",
+                 "opening_hours": "24/7",
+                 "wheelchair": "yes"
+                 }
+                 },
+                 {
+                 "type": "node",
+                 "id": 3338458355,
+                 "lat": 52.5106351,
+                 "lon": 13.3830226,
+                 "tags": {
+                 "access": "customers",
+                 "amenity": "toilets",
+                 "fee": "yes",
+                 "toilets:disposal": "flush",
+                 "toilets:position": "seated",
+                 "wheelchair": "yes"
+                 }
+                 },
+                 {
+                 "type": "node",
+                 "id": 3338459657,
+                 "lat": 52.5183901,
+                 "lon": 13.3890855,
+                 "tags": {
+                 "access": "customers",
+                 "amenity": "toilets",
+                 "fee": "no",
+                 "toilets:disposal": "flush",
+                 "toilets:position": "seated",
+                 "wheelchair": "yes"
+                 }
+                 },
+                 {
+                 "type": "node",
+                 "id": 4003667897,
+                 "lat": 52.5203163,
+                 "lon": 13.3876880,
+                 "tags": {
+                 "access": "public",
+                 "amenity": "toilets",
+                 "fee": "yes",
+                 "indoor": "yes",
+                 "level": "-1",
+                 "operator": "Sanifair",
+                 "wheelchair": "yes"
+                 }
+                 },
+                 {
+                 "type": "node",
+                 "id": 5022093422,
+                 "lat": 52.5191343,
+                 "lon": 13.3646383,
+                 "tags": {
+                 "amenity": "toilets"
+                 }
+                 }
+                 ]
+}

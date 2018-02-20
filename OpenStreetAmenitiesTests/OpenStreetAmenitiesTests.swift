@@ -10,26 +10,27 @@ import XCTest
 import Quick
 import Nimble
 import CoreLocation
+import OHHTTPStubs
 
 @testable import OpenStreetAmenities
 
 class OpenStreetAmenitiesTests: QuickSpec {
     override func spec() {
-        describe("LocationProvider protocol") {
-            context("When started with LocationManager", closure: {
+        describe("Given a LocationProvider") {
+            context("When it's started with LocationManager", closure: {
                 // Arrange
                 let mockLocationManager = MockLocationManager()
                 let locationProvider: LocationProvidable = LocationProvider(locationManager: mockLocationManager)
                 beforeEach {
                     mockLocationManager.callCount = 0
                 }
-                it("starts location updates", closure: {
+                it("then starts location updates", closure: {
                     // Act
                     locationProvider.startLocationUpdates()
                     //Assert
                     expect(mockLocationManager.callCount).to(equal(4))
                 })
-                it("provides current location", closure: {
+                it("then provides current location", closure: {
                     // Act
                     let (lat, lon) = locationProvider.getCurrentLocation()
                     //Assert
@@ -39,7 +40,7 @@ class OpenStreetAmenitiesTests: QuickSpec {
             })
         }
         
-        fdescribe("MapViewModel tests") {
+        describe("Given a MapViewModel") {
             var viewModel: MapViewModel<AmenityRequest>?
             beforeEach {
                 let mockLocationProvider = MockLocationProvider()
@@ -68,57 +69,12 @@ class OpenStreetAmenitiesTests: QuickSpec {
                 expect(locations).toEventuallyNot(beEmpty())
                 
                 expect(locations.first?.id).toEventuallyNot(beEmpty())
-                expect(locations.first?.coordinates.0).toEventuallyNot(equal(0))
-                expect(locations.first?.coordinates.1).toEventuallyNot(equal(0))
-            })
-        }
-        
-        describe("Amenity Request tests") {
-            let amenityReqeust = AmenityRequest()
-            it("should fetch amenities", closure: {
-                // Arrange
-                var successFlag = false
-                var locations: [Location] = []
-                // Act
-                amenityReqeust.getAmeneties(of: AmenityType.Toilets,
-                                            latitude: 52.51631,
-                                            longitude: 13.37777,
-                                            radius: 1000,
-                                            completionBlock: { (success, results) in
-                                                successFlag = success
-                                                if successFlag, let results = results as? [Location] {
-                                                    locations = results
-                                                }
-                })
-
-                //Assert
-                expect(successFlag).toEventuallyNot(beFalse())
-                expect(locations).toEventuallyNot(beEmpty())
+                expect(locations.first?.id).toEventually(equal("DummyLocation001"))
+                expect(locations.first?.title).toEventually(equal("Dummy Amenity"))
                 
-                expect(locations.first?.id).toEventuallyNot(beEmpty())
                 expect(locations.first?.coordinates.0).toEventuallyNot(equal(0))
                 expect(locations.first?.coordinates.1).toEventuallyNot(equal(0))
             })
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
