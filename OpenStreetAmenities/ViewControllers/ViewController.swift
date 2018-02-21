@@ -102,7 +102,7 @@ extension ViewController: MKMapViewDelegate {
         guard let location = view.annotation as? Location else {
             return
         }
-        let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
+        let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeWalking]
         location.mapItem().openInMaps(launchOptions: launchOptions)
     }
 }

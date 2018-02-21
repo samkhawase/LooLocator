@@ -14,7 +14,12 @@ class Location: NSObject, MKAnnotation {
     
     let id: String
     let title: String?
-    let locationName: String
+    
+    var subtitle: String? {
+        return "\(accessibility.isAccessible ? "♿︎" : "")"
+    }
+    
+    let locationDescription: String
     let coordinates: (Double, Double)
     
     var amenity: String?
@@ -22,10 +27,10 @@ class Location: NSObject, MKAnnotation {
     var feeAmount: String?
     let accessibility: WheelChairAccessibility
     
-    init(id: String, title:String, locationName: String, coordintes: (Double, Double), isAccessible: Bool ) {
+    init(id: String, title:String, locationDescription: String, coordintes: (Double, Double), isAccessible: Bool ) {
         self.id = id
         self.title = title
-        self.locationName = locationName
+        self.locationDescription = locationDescription
         self.coordinates = coordintes
         self.coordinate = CLLocationCoordinate2D(latitude: CLLocationDegrees(coordinates.0), longitude: CLLocationDegrees(coordinates.1))
         self.accessibility = WheelChairAccessibility(isAccessible: isAccessible)
@@ -33,7 +38,7 @@ class Location: NSObject, MKAnnotation {
     convenience init(jsonElement: OSMElement) {
         self.init(id: String(describing: jsonElement.id),
                   title: jsonElement.tags?.englishName ?? jsonElement.tags?.name ?? "Unknown Amenity",
-                  locationName: jsonElement.tags?.name ?? "Unknown Amenity",
+                  locationDescription: jsonElement.tags?.name ?? "Toilet",
                   coordintes: (jsonElement.lat ?? 0.0, jsonElement.lon ?? 0.0),
                   isAccessible: jsonElement.tags?.wheelchair != nil)
     }
