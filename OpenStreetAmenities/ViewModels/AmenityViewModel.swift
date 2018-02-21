@@ -26,7 +26,7 @@ enum AmenityType: String {
 }
 
 // MapviewModel: Protocol implementation
-class MapViewModel<T: AmenityRequest, S:ViewController>: MapViewModelConfirming, LocationObservable {
+class MapViewModel<T: AmenityRequest, S:MapViewModelObservable>: MapViewModelConfirming, LocationObservable {
 
     var locationProvider: LocationProvidable
     var amenityRequest: T

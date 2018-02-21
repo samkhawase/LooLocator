@@ -19,7 +19,7 @@ class MockAmenityRequest: AmenityRequest {
                                radius: Double,
                                completionBlock: @escaping CompletionBlock) {
         callCount += 1
-        let dummyOSMData = [Location(id: "DummyLocation001", title: "Dummy Amenity", locationName: "Dummy Amenity Name", coordintes: (52.51631, 13.37777), isAccessible: false)]
+        let dummyOSMData = [Location(id: "DummyLocation001", title: "Dummy Amenity", locationDescription: "Dummy Amenity Name", coordintes: (52.51631, 13.37777), isAccessible: false)]
         completionBlock(true, dummyOSMData as AnyObject)
     }
     

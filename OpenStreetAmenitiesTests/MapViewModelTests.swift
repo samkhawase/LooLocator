@@ -1,8 +1,8 @@
 //
-//  OpenStreetAmenitiesTests.swift
+//  MapViewModelTests.swift
 //  OpenStreetAmenitiesTests
 //
-//  Created by Sam Khawase on 14.02.18.
+//  Created by Sam Khawase on 23.02.18.
 //  Copyright © 2018 OpenStreetAmenities. All rights reserved.
 //
 
@@ -14,38 +14,17 @@ import OHHTTPStubs
 
 @testable import OpenStreetAmenities
 
-class OpenStreetAmenitiesTests: QuickSpec {
+class MapViewModelTests: QuickSpec {
     override func spec() {
-        describe("Given a LocationProvider") {
-            context("When it's started with LocationManager", closure: {
-                // Arrange
-                let mockLocationManager = MockLocationManager()
-                let locationProvider: LocationProvidable = LocationProvider(locationManager: mockLocationManager)
-                beforeEach {
-                    mockLocationManager.callCount = 0
-                }
-                it("then starts location updates", closure: {
-                    // Act
-                    locationProvider.startLocationUpdates()
-                    //Assert
-                    expect(mockLocationManager.callCount).to(equal(4))
-                })
-                it("then provides current location", closure: {
-                    // Act
-                    let (lat, lon) = locationProvider.getCurrentLocation()
-                    //Assert
-                    expect(lat).to(equal(0))
-                    expect(lon).to(equal(0))
-                })
-            })
-        }
-        
         describe("Given a MapViewModel") {
-            var viewModel: MapViewModel<AmenityRequest>?
+            var viewModel: MapViewModel<AmenityRequest, MockViewController>?
             beforeEach {
                 let mockLocationProvider = MockLocationProvider()
                 let mockAmenityRequest = MockAmenityRequest()
-                viewModel = MapViewModel(locationProvider: mockLocationProvider, amenityRequest:mockAmenityRequest )
+                let mockViewController = MockViewController()
+                viewModel = MapViewModel(locationProvider: mockLocationProvider,
+                                         amenityRequest:mockAmenityRequest,
+                                         listener:mockViewController)
             }
             
             it("get current location", closure: {
