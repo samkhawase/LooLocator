@@ -56,7 +56,7 @@ class AmenityRequest: NetworkRequestProviding {
             return nil
         }
         let locationRequest = NSMutableURLRequest(url:baseUrl,
-                                                  cachePolicy: .returnCacheDataElseLoad,
+                                                  cachePolicy: .reloadIgnoringCacheData,
                                                   timeoutInterval: 1.0)
         locationRequest.httpMethod = "POST"
         

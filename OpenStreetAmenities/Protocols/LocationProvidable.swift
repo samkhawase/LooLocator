@@ -7,6 +7,8 @@
 //
 
 protocol LocationProvidable {
+    var listener: LocationObservable? { get set }
+    func setListener(listener: LocationObservable)
     func startLocationUpdates()
     func getCurrentLocation() -> (Double, Double)
 }

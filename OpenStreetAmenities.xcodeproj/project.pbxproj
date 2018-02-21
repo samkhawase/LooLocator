@@ -58,6 +58,7 @@
 		22D1388E203A1B3E0077E457 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22801B6A2036DF8300D4C2D2 /* RxSwift.framework */; };
 		22D1388F203A1B4A0077E457 /* RxSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 22801B6A2036DF8300D4C2D2 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		22D13890203AD0D30077E457 /* OpenStreetAmenitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229B32A5203455CA0098E456 /* OpenStreetAmenitiesTests.swift */; };
+		22D13892203C94AB0077E457 /* berlin.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 22D13891203C94AB0077E457 /* berlin.gpx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,6 +135,7 @@
 		22D1387C20386A2A0077E457 /* ApiClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientTests.swift; sourceTree = "<group>"; };
 		22D1387E20386D3D0077E457 /* stubbedRepsonse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stubbedRepsonse.json; sourceTree = "<group>"; };
 		22D1388020388D8E0077E457 /* AmenityRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmenityRequestTests.swift; sourceTree = "<group>"; };
+		22D13891203C94AB0077E457 /* berlin.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = berlin.gpx; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 		22801B462035BA1800D4C2D2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				22D13891203C94AB0077E457 /* berlin.gpx */,
 				229B3297203455CA0098E456 /* Assets.xcassets */,
 				229B329C203455CA0098E456 /* Info.plist */,
 			);
@@ -385,6 +388,7 @@
 				22801B562035BEC400D4C2D2 /* Main.storyboard in Resources */,
 				22801B552035BEC400D4C2D2 /* LaunchScreen.storyboard in Resources */,
 				229B3298203455CA0098E456 /* Assets.xcassets in Resources */,
+				22D13892203C94AB0077E457 /* berlin.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

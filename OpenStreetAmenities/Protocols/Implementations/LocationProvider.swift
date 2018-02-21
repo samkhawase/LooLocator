@@ -8,10 +8,15 @@
 import CoreLocation
 
 class LocationProvider: NSObject, LocationProvidable, CLLocationManagerDelegate {
+    var listener: LocationObservable?
     
+    func setListener(listener: LocationObservable) {
+        self.listener = listener
+    }
+
     fileprivate var locationManager: LocationManagerConfigurable
     fileprivate var currentLocation: CLLocation?
-    fileprivate var observer: LocationObservable?
+    //fileprivate var observer: LocationObservable?
     
     // inject
     init(locationManager:LocationManagerConfigurable){
@@ -37,10 +42,17 @@ class LocationProvider: NSObject, LocationProvidable, CLLocationManagerDelegate 
     
     // CLLocationManager delegate methods
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let lastLocation = locations.last, let observer = self.observer else {
+        guard let lastLocation = locations.last,
+            let listener = self.listener else {
+                return
+        }
+        
+        if currentLocation != nil && Double((currentLocation?.distance(from: lastLocation))!) < 100.0 {
+            //print("current Location \(String(describing: currentLocation?.coordinate)) is same as last Location: \(String(describing: lastLocation.coordinate))")
             return
         }
+        
         currentLocation = lastLocation
-        observer.setCurrentLocation(latitude: lastLocation.coordinate.latitude, longitude: lastLocation.coordinate.longitude)
+        listener.setCurrentLocation(latitude: lastLocation.coordinate.latitude, longitude: lastLocation.coordinate.longitude)
     }
 }

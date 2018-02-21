@@ -29,6 +29,14 @@ internal struct OSMElement: Codable {
         var amenity: String?
         var fee: String?
         var name: String?
+        var englishName: String?
         var wheelchair: String?
+        enum CodingKeys: String, CodingKey {
+            case englishName = "name:en"
+            case amenity = "amenity"
+            case fee = "fee"
+            case name = "name"
+            case wheelchair = "wheelchair"
+        }
     }
 }

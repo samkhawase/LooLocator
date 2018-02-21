@@ -26,16 +26,22 @@ enum AmenityType: String {
 }
 
 // MapviewModel: Protocol implementation
-class MapViewModel<T: AmenityRequest>: MapViewModelConfirming, LocationObservable {
+class MapViewModel<T: AmenityRequest, S:ViewController>: MapViewModelConfirming, LocationObservable {
 
     var locationProvider: LocationProvidable
     var amenityRequest: T
+    var listenerView: S
     
     // inject the dependencies in ctor
-    init(locationProvider: LocationProvidable, amenityRequest: T) {
+    init(locationProvider: LocationProvidable, amenityRequest: T, listener: S) {
         self.locationProvider = locationProvider
         self.locationProvider.startLocationUpdates()
         self.amenityRequest = amenityRequest
+        self.listenerView = listener
+        
+        defer {
+            self.locationProvider.setListener(listener: self)
+        }
     }
     
     func getCurrentLocation() -> (Double, Double) {
@@ -45,6 +51,10 @@ class MapViewModel<T: AmenityRequest>: MapViewModelConfirming, LocationObservabl
     
     func getAmenities(in range: Int, type: AmenityType, completion: @escaping CompletionBlock) {
         let (lat, lon) = getCurrentLocation()
+        print("latitude: \(lat) longitude: \(lon)")
+        if lat == 0 && lon == 0 {
+            completion(false, nil)
+        }
         amenityRequest.getAmeneties(of: AmenityType.Toilets,
                                     latitude: lat,
                                     longitude: lon,
@@ -55,6 +65,6 @@ class MapViewModel<T: AmenityRequest>: MapViewModelConfirming, LocationObservabl
     
     // This is a message from the location provider
     func setCurrentLocation(latitude: Double, longitude: Double) {
-        
+        listenerView.setCurrentLocation(latitude: latitude, longitude: longitude)
     }
 }
