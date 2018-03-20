@@ -9,10 +9,6 @@
 import XCTest
 import Quick
 import Nimble
-import CoreLocation
-import OHHTTPStubs
-
-@testable import OpenStreetAmenities
 
 class LocationProviderTests: QuickSpec {
     override func spec() {

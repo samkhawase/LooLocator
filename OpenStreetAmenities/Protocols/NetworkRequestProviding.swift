@@ -14,9 +14,6 @@ protocol NetworkRequestProviding {
     // The model that the request deals with
     associatedtype SerializedType : Codable
     
-    // the function that performs the network request
-    //func performNetworkRequest(completion: @escaping CompletionBlock)
-    
     // CRUD interface
     func get(request: NSMutableURLRequest, completion: @escaping CompletionBlock)
     func post(request: NSMutableURLRequest, completion: @escaping CompletionBlock)

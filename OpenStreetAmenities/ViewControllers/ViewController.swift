@@ -13,7 +13,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
     
-    private(set) lazy var viewModel: MapViewModel<AmenityRequest, ViewController> = {
+    private(set) lazy var viewModel: MapViewModel<ViewController> = {
         let _viewModel = MapViewModel(locationProvider: amenityLocationProvider, amenityRequest: amenityRequest, listener: self)
         return _viewModel
     }()
@@ -106,4 +106,5 @@ extension ViewController: MKMapViewDelegate {
         location.mapItem().openInMaps(launchOptions: launchOptions)
     }
 }
+
 

@@ -14,8 +14,8 @@ extension NetworkRequestProviding {
         return _baseUrl
     }
     
-    func dataTask(request: NSMutableURLRequest, completion: @escaping (Bool, AnyObject?) -> ()) {
-        //request.httpMethod = request.httpMethod
+    func dataTask(request: NSMutableURLRequest,
+                  completion: @escaping (Bool, AnyObject?) -> ()) {
         
         let session = URLSession(configuration: URLSessionConfiguration.default)
         

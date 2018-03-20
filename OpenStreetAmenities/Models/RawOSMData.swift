@@ -7,15 +7,12 @@
 //
 
 import Foundation
+
 internal struct RawOSMData: Codable {
-    var version: Double
-    var generator: String
+    // We're interested only in elements, and can ignore other elements
     var elements: [OSMElement]?
-    var osm3s: OSM3S?
-    
-    struct OSM3S: Codable {
-        var timestamp_osm_base: String
-        var copyright: String
+    private enum CodingKeys: String, CodingKey {
+        case elements
     }
 }
 

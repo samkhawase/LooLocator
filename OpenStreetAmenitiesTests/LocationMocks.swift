@@ -7,7 +7,6 @@
 //
 
 import MapKit
-@testable import OpenStreetAmenities
 
 class MockLocationProvider: LocationProvidable {
     var listener: LocationObservable?
@@ -15,15 +14,12 @@ class MockLocationProvider: LocationProvidable {
     func setListener(listener: LocationObservable) {
         self.listener = listener
     }
-    
-    internal var callCount = 0
+
     func startLocationUpdates() {
-        callCount += 1
         listener?.setCurrentLocation(latitude: 52.51631, longitude: 13.37777)
     }
     
     func getCurrentLocation() -> (Double, Double) {
-        callCount += 1
         return (52.51631, 13.37777)
     }
 }

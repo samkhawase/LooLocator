@@ -9,31 +9,22 @@
 import Contacts
 import MapKit
 
-class Location: NSObject, MKAnnotation {
-    var coordinate: CLLocationCoordinate2D
-    
+class Location: NSObject {
     let id: String
     let title: String?
-    
-    var subtitle: String? {
-        return "\(accessibility.isAccessible ? "♿︎" : "")"
-    }
-    
     let locationDescription: String
     let coordinates: (Double, Double)
-    
     var amenity: String?
     var fee: Bool?
     var feeAmount: String?
-    let accessibility: WheelChairAccessibility
+    let isAccessible: Bool
     
     init(id: String, title:String, locationDescription: String, coordintes: (Double, Double), isAccessible: Bool ) {
         self.id = id
         self.title = title
         self.locationDescription = locationDescription
         self.coordinates = coordintes
-        self.coordinate = CLLocationCoordinate2D(latitude: CLLocationDegrees(coordinates.0), longitude: CLLocationDegrees(coordinates.1))
-        self.accessibility = WheelChairAccessibility(isAccessible: isAccessible)
+        self.isAccessible = isAccessible
     }
     convenience init(jsonElement: OSMElement) {
         self.init(id: String(describing: jsonElement.id),
@@ -41,6 +32,15 @@ class Location: NSObject, MKAnnotation {
                   locationDescription: jsonElement.tags?.name ?? "Toilet",
                   coordintes: (jsonElement.lat ?? 0.0, jsonElement.lon ?? 0.0),
                   isAccessible: jsonElement.tags?.wheelchair != nil)
+    }
+}
+
+extension Location: MKAnnotation {
+    var coordinate: CLLocationCoordinate2D {
+        return CLLocationCoordinate2D(latitude: CLLocationDegrees(coordinates.0), longitude: CLLocationDegrees(coordinates.1))
+    }
+    var subtitle: String? {
+        return "\(isAccessible ? "♿︎" : "")"
     }
     // Annotation right callout accessory opens this mapItem in Maps app
     func mapItem() -> MKMapItem {
@@ -52,28 +52,3 @@ class Location: NSObject, MKAnnotation {
         return mapItem
     }
 }
-
-struct WheelChairAccessibility {
-    var isAccessible: Bool
-    var description: String?
-    
-    init(isAccessible: Bool) {
-        self.isAccessible = isAccessible
-    }
-}
-
-/* Sample data from OSM
- {
- "type": "node",
- "id": 71180687,
- "lat": 52.5175448,
- "lon": 13.3738695,
- "tags": {
- "amenity": "toilets",
- "fee": "yes",
- "toilets:wheelchair": "yes",
- "wheelchair": "yes",
- "wheelchair:description": "Euro-Schlüssel notwendig"
- }
- }
- */

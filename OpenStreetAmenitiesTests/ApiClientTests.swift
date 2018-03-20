@@ -12,7 +12,6 @@ import Nimble
 import CoreLocation
 import OHHTTPStubs
 
-@testable import OpenStreetAmenities
 
 class ApiClientTests: QuickSpec {
     override func spec() {

@@ -7,7 +7,6 @@
 //
 
 import Foundation
-@testable import OpenStreetAmenities
 
 class MockViewController: MapViewModelObservable {
     func setCurrentLocation(latitude: Double, longitude: Double) {}

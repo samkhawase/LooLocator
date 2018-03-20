@@ -12,12 +12,10 @@ import Nimble
 import CoreLocation
 import OHHTTPStubs
 
-@testable import OpenStreetAmenities
-
 class MapViewModelTests: QuickSpec {
     override func spec() {
         describe("Given a MapViewModel") {
-            var viewModel: MapViewModel<AmenityRequest, MockViewController>?
+            var viewModel: MapViewModel<MockViewController>?
             beforeEach {
                 let mockLocationProvider = MockLocationProvider()
                 let mockAmenityRequest = MockAmenityRequest()

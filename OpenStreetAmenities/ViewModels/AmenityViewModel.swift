@@ -26,14 +26,14 @@ enum AmenityType: String {
 }
 
 // MapviewModel: Protocol implementation
-class MapViewModel<T: AmenityRequest, S:MapViewModelObservable>: MapViewModelConfirming, LocationObservable {
+class MapViewModel<S:MapViewModelObservable>: MapViewModelConfirming, LocationObservable {
 
     var locationProvider: LocationProvidable
-    var amenityRequest: T
+    var amenityRequest: AmenityRequest
     var listenerView: S
     
     // inject the dependencies in ctor
-    init(locationProvider: LocationProvidable, amenityRequest: T, listener: S) {
+    init(locationProvider: LocationProvidable, amenityRequest: AmenityRequest, listener: S) {
         self.locationProvider = locationProvider
         self.locationProvider.startLocationUpdates()
         self.amenityRequest = amenityRequest
