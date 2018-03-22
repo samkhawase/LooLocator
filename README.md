@@ -1,13 +1,27 @@
 
 # OpenStreetAmenities
 
-Find Amenities (*like toilets*) near you! The simple iOS  fetches the crowd-sourced data from OpenStreetMaps, and shows toilets within walking distance. User can then use AppleMaps to find walking directions to the amenity. 
+Find Amenities (*like toilets*) near you! The simple iOS  fetches the crowd-sourced data from OpenStreetMaps, and shows toilets within walking distance. 
+User can then use AppleMaps to find walking directions to the amenity. 
+
+## Design Rationale
+
+The following series of bite-sized posts explain the design rationale behind creating the app:
+
+1. [Part 1: Introduction - Writing a modular, and testable iOS App in Swift using MVVM pattern](https://samkhawase.com/blog/mvvm_swift_introduction/)
+2. [Part 2: Defining the Data Model](https://samkhawase.com/blog/mvvm_swift_model/)
+3. [Part 3: The Location provider](https://samkhawase.com/blog/mvvm_swift_location_provider/)
+4. [Part 4: Defining the networking layer](https://samkhawase.com/blog/mvvm_swift_networking/)
+5. [Part 5: The ViewModel](https://samkhawase.com/blog/mvvm_swift_view_model/)
+6. [Part 6: The Final App - Putting it all together](https://samkhawase.com/blog/mvvm_swift_final_app/)
+
+
 
 ## Getting Started
 
 Here are the steps to get started with the project on your local machine:
 1. Clone the git repositiory
-2. Run `carthage update --platform ios --cache-builds` to fetch the dependencies
+2. Run `carthage update --platform iOS --cache-builds --no-use-binaries` to fetch the dependencies.
 3. If running on the simulator, you can edit the scheme and set the simulated location in Xcode. (*E.g. Hongkong*)
 4. Run the project via Xcode.
 
