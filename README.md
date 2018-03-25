@@ -1,7 +1,7 @@
 
 # OpenStreetAmenities
 
-Find Amenities (*like toilets*) near you! The simple iOS  fetches the crowd-sourced data from OpenStreetMaps, and shows toilets within walking distance. 
+Find Amenities (*like toilets*) near you! The simple iOS  fetches the crowd-sourced data from OpenStreetMap, and shows toilets within walking distance. 
 User can then use AppleMaps to find walking directions to the amenity. 
 
 ## Design Rationale
