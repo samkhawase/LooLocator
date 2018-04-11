@@ -6,6 +6,8 @@
 //  Copyright © 2018 OpenStreetAmenities. All rights reserved.
 //
 
+import CoreLocation
+
 protocol LocationManagerConfigurable {
     // wrap var delegate and desiredAccuracy to keep it platform agnostic
     func setDelegate(to instance: CLLocationManagerDelegate?)

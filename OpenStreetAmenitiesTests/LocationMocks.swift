@@ -34,7 +34,7 @@ class MockLocationManager: LocationManagerConfigurable {
     internal var callCount = 0
     fileprivate var delegate: LocationProvider?
     
-    func setDelegate(to instance: AnyObject) {
+    func setDelegate(to instance: CLLocationManagerDelegate?) {
         callCount += 1
         delegate = instance as? LocationProvider
     }
