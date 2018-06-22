@@ -56,6 +56,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
+        mapView.showsUserLocation = true
+    }
+    @IBAction func resetLocation(_ sender: Any) {
+        let rawLocation = viewModel.getCurrentLocation()
+        let currentLocation = CLLocation(latitude: CLLocationDegrees(rawLocation.0), longitude: CLLocationDegrees(rawLocation.1))
+        centerMapOnLocation(location: currentLocation)
+        print("RESET location")
     }
     
     func centerMapOnLocation(location: CLLocation) {
