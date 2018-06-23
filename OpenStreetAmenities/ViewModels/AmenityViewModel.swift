@@ -11,6 +11,7 @@ import CoreLocation
 protocol MapViewModelConfirming {
     func getCurrentLocation() -> (Double, Double)
     func getAmenities(in range: Int, type: AmenityType, completion: @escaping CompletionBlock)
+    func centerMapToCurrentLocationAction()
 }
 
 protocol MapViewModelObservable {
@@ -19,6 +20,7 @@ protocol MapViewModelObservable {
     
     func setCurrentLocation(latitude: Double, longitude: Double)
     func addAmenityToMap(amenity:Amenity)
+    func centerMapToCurrentLocation(latitude: Double, longitude: Double)
 }
 
 enum AmenityType: String {
@@ -66,5 +68,9 @@ class MapViewModel<S:MapViewModelObservable>: MapViewModelConfirming, LocationOb
     // This is a message from the location provider
     func setCurrentLocation(latitude: Double, longitude: Double) {
         listenerView.setCurrentLocation(latitude: latitude, longitude: longitude)
+    }
+    func centerMapToCurrentLocationAction() {
+        let currentLocation = getCurrentLocation()
+        listenerView.centerMapToCurrentLocation(latitude: currentLocation.0, longitude: currentLocation.1)
     }
 }

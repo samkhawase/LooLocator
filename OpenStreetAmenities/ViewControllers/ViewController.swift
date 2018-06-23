@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         return _clLocationManager
     }()
 
-    let regionRadius: CLLocationDistance = 1000
+    let regionRadius: CLLocationDistance = 200
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -58,18 +58,18 @@ class ViewController: UIViewController {
         mapView.delegate = self
         mapView.showsUserLocation = true
     }
+    
     @IBAction func resetLocation(_ sender: Any) {
-        let rawLocation = viewModel.getCurrentLocation()
-        let currentLocation = CLLocation(latitude: CLLocationDegrees(rawLocation.0), longitude: CLLocationDegrees(rawLocation.1))
-        centerMapOnLocation(location: currentLocation)
-        print("RESET location")
+        viewModel.centerMapToCurrentLocationAction()
     }
     
     func centerMapOnLocation(location: CLLocation) {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
                                                                   regionRadius,
                                                                   regionRadius)
-        mapView.setRegion(coordinateRegion, animated: true)
+        DispatchQueue.main.async { [weak self] in
+            self?.mapView.setRegion(coordinateRegion, animated: true)
+        }
     }
 }
 
@@ -81,6 +81,10 @@ extension ViewController: MapViewModelObservable{
         let currentLocation = CLLocation(latitude: CLLocationDegrees(latitude), longitude: CLLocationDegrees(longitude))
         centerMapOnLocation(location: currentLocation)
         getAmenities()
+    }
+    func centerMapToCurrentLocation(latitude: Double, longitude: Double) {
+        let currentLocation = CLLocation(latitude: CLLocationDegrees(latitude), longitude: CLLocationDegrees(longitude))
+        centerMapOnLocation(location: currentLocation)
     }
 }
 
