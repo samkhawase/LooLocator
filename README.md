@@ -1,5 +1,5 @@
 
-# OpenStreetAmenities
+# LooLocator
 
 Find Amenities (*like toilets*) near you! The simple iOS  fetches the crowd-sourced data from OpenStreetMap, and shows toilets within walking distance. 
 User can then use AppleMaps to find walking directions to the amenity. 
@@ -40,7 +40,7 @@ The app uses BDD style tests using Quick and Nimble. There are unit tests writte
 To run the test, enter the command on the command line.
 
 ```
-xcodebuild -scheme 'OpenStreetAmenities' \
+xcodebuild -scheme 'LooLocator' \
 			-sdk iphonesimulator \
 			-configuration Debug \
 			-destination 'platform=iOS Simulator,name=iPhone 6s,OS=latest' \
@@ -50,7 +50,7 @@ xcodebuild -scheme 'OpenStreetAmenities' \
 The output will be similar to 
 
 ```
-Test Suite OpenStreetAmenitiesTests.xctest started
+Test Suite LooLocatorTests.xctest started
 ApiClientTests
     ✓ Amenity_Request_tests__should_fetch_amenities (0.027 seconds)
 LocationProviderTests
