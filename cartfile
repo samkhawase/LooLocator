@@ -1,7 +1,0 @@
-# Main App specific frameworks
-github "ReactiveX/RxSwift" ~> 4.0
-
-# Auxiliary frameworks
-github "Quick/Quick"
-github "Quick/Nimble"
-github "AliSoftware/OHHTTPStubs"

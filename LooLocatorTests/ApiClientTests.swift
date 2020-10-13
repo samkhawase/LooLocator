@@ -11,6 +11,7 @@ import Quick
 import Nimble
 import CoreLocation
 import OHHTTPStubs
+import OHHTTPStubsSwift
 
 
 class ApiClientTests: QuickSpec {
@@ -28,7 +29,7 @@ class ApiClientTests: QuickSpec {
                 })
             }
             afterEach {
-                OHHTTPStubs.removeAllStubs()
+                HTTPStubs.removeAllStubs()
             }
             
             it("should fetch amenities", closure: {

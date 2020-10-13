@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,25 +21,11 @@
 		22801B652035E59300D4C2D2 /* NetworkReqeustProvidingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22801B642035E59300D4C2D2 /* NetworkReqeustProvidingExtension.swift */; };
 		22801B672036209C00D4C2D2 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22801B662036209C00D4C2D2 /* Location.swift */; };
 		22801B692036D9D700D4C2D2 /* AmenityMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22801B682036D9D700D4C2D2 /* AmenityMocks.swift */; };
-		22801B6B2036DF8300D4C2D2 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22801B6A2036DF8300D4C2D2 /* RxSwift.framework */; };
-		22801B6D2036DFA100D4C2D2 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22801B6C2036DFA100D4C2D2 /* RxCocoa.framework */; };
-		22801B6F2036DFB000D4C2D2 /* RxCocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 22801B6C2036DFA100D4C2D2 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		22801B702036DFB000D4C2D2 /* RxSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 22801B6A2036DF8300D4C2D2 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		22801B732036DFC800D4C2D2 /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22801B712036DFC800D4C2D2 /* RxTest.framework */; };
-		22801B742036DFC800D4C2D2 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22801B722036DFC800D4C2D2 /* RxBlocking.framework */; };
-		22801B752036DFD600D4C2D2 /* RxBlocking.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 22801B722036DFC800D4C2D2 /* RxBlocking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		22801B762036DFD600D4C2D2 /* RxTest.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 22801B712036DFC800D4C2D2 /* RxTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		229B3291203455CA0098E456 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229B3290203455CA0098E456 /* AppDelegate.swift */; };
 		229B3293203455CA0098E456 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229B3292203455CA0098E456 /* ViewController.swift */; };
 		229B3298203455CA0098E456 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 229B3297203455CA0098E456 /* Assets.xcassets */; };
-		229B32B3203457AC0098E456 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 229B32B1203457AC0098E456 /* Nimble.framework */; };
-		229B32B4203457AC0098E456 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 229B32B2203457AC0098E456 /* Quick.framework */; };
-		229B32B6203457CE0098E456 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 229B32B1203457AC0098E456 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		229B32B7203457CE0098E456 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 229B32B2203457AC0098E456 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		229B32BA203459660098E456 /* AmenityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229B32B9203459660098E456 /* AmenityViewModel.swift */; };
 		229B32BC203460AE0098E456 /* LocationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229B32BB203460AE0098E456 /* LocationProvider.swift */; };
-		22D1387A203862950077E457 /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22D13879203862940077E457 /* OHHTTPStubs.framework */; };
-		22D1387B2038629C0077E457 /* OHHTTPStubs.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 22D13879203862940077E457 /* OHHTTPStubs.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		22D1387D20386A2A0077E457 /* ApiClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D1387C20386A2A0077E457 /* ApiClientTests.swift */; };
 		22D1387F20386D3D0077E457 /* stubbedRepsonse.json in Resources */ = {isa = PBXBuildFile; fileRef = 22D1387E20386D3D0077E457 /* stubbedRepsonse.json */; };
 		22D13882203A19450077E457 /* AmenityRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22801B5F2035E48200D4C2D2 /* AmenityRequest.swift */; };
@@ -54,13 +40,15 @@
 		22D1388B203A1A080077E457 /* RawOSMData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22801B622035E4EB00D4C2D2 /* RawOSMData.swift */; };
 		22D1388C203A1A080077E457 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22801B662036209C00D4C2D2 /* Location.swift */; };
 		22D1388D203A1A2A0077E457 /* AmenityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229B32B9203459660098E456 /* AmenityViewModel.swift */; };
-		22D1388E203A1B3E0077E457 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22801B6A2036DF8300D4C2D2 /* RxSwift.framework */; };
-		22D1388F203A1B4A0077E457 /* RxSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 22801B6A2036DF8300D4C2D2 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		22D13890203AD0D30077E457 /* LocationProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229B32A5203455CA0098E456 /* LocationProviderTests.swift */; };
 		22D13892203C94AB0077E457 /* berlin.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 22D13891203C94AB0077E457 /* berlin.gpx */; };
 		22D13893204022E70077E457 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229B3292203455CA0098E456 /* ViewController.swift */; };
 		22D13895204023640077E457 /* MockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D13894204023640077E457 /* MockViewController.swift */; };
 		22D138972040269C0077E457 /* MapViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D138962040269C0077E457 /* MapViewModelTests.swift */; };
+		8A2413F9253636AD005B7E5C /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 8A2413F8253636AD005B7E5C /* Quick */; };
+		8A2413FE253636E2005B7E5C /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 8A2413FD253636E2005B7E5C /* Nimble */; };
+		8A2414032536370D005B7E5C /* OHHTTPStubsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8A2414022536370D005B7E5C /* OHHTTPStubsSwift */; };
+		8A2414052536370D005B7E5C /* OHHTTPStubs in Frameworks */ = {isa = PBXBuildFile; productRef = 8A2414042536370D005B7E5C /* OHHTTPStubs */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,35 +60,6 @@
 			remoteInfo = LooLocator;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		22801B6E2036DFA700D4C2D2 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				22801B6F2036DFB000D4C2D2 /* RxCocoa.framework in CopyFiles */,
-				22801B702036DFB000D4C2D2 /* RxSwift.framework in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		229B32B5203457C50098E456 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				22D1388F203A1B4A0077E457 /* RxSwift.framework in CopyFiles */,
-				22D1387B2038629C0077E457 /* OHHTTPStubs.framework in CopyFiles */,
-				22801B752036DFD600D4C2D2 /* RxBlocking.framework in CopyFiles */,
-				22801B762036DFD600D4C2D2 /* RxTest.framework in CopyFiles */,
-				229B32B6203457CE0098E456 /* Nimble.framework in CopyFiles */,
-				229B32B7203457CE0098E456 /* Quick.framework in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		22801B392035B0F100D4C2D2 /* LocationMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMocks.swift; sourceTree = "<group>"; };
@@ -146,8 +105,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22801B6D2036DFA100D4C2D2 /* RxCocoa.framework in Frameworks */,
-				22801B6B2036DF8300D4C2D2 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,12 +112,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22D1388E203A1B3E0077E457 /* RxSwift.framework in Frameworks */,
-				22D1387A203862950077E457 /* OHHTTPStubs.framework in Frameworks */,
-				22801B732036DFC800D4C2D2 /* RxTest.framework in Frameworks */,
-				22801B742036DFC800D4C2D2 /* RxBlocking.framework in Frameworks */,
-				229B32B3203457AC0098E456 /* Nimble.framework in Frameworks */,
-				229B32B4203457AC0098E456 /* Quick.framework in Frameworks */,
+				8A2413F9253636AD005B7E5C /* Quick in Frameworks */,
+				8A2414032536370D005B7E5C /* OHHTTPStubsSwift in Frameworks */,
+				8A2413FE253636E2005B7E5C /* Nimble in Frameworks */,
+				8A2414052536370D005B7E5C /* OHHTTPStubs in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,7 +270,6 @@
 				229B3289203455CA0098E456 /* Sources */,
 				229B328A203455CA0098E456 /* Frameworks */,
 				229B328B203455CA0098E456 /* Resources */,
-				22801B6E2036DFA700D4C2D2 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -333,7 +287,6 @@
 				229B329D203455CA0098E456 /* Sources */,
 				229B329E203455CA0098E456 /* Frameworks */,
 				229B329F203455CA0098E456 /* Resources */,
-				229B32B5203457C50098E456 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -341,6 +294,12 @@
 				229B32A3203455CA0098E456 /* PBXTargetDependency */,
 			);
 			name = LooLocatorTests;
+			packageProductDependencies = (
+				8A2413F8253636AD005B7E5C /* Quick */,
+				8A2413FD253636E2005B7E5C /* Nimble */,
+				8A2414022536370D005B7E5C /* OHHTTPStubsSwift */,
+				8A2414042536370D005B7E5C /* OHHTTPStubs */,
+			);
 			productName = LooLocatorTests;
 			productReference = 229B32A1203455CA0098E456 /* LooLocatorTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -376,6 +335,11 @@
 				Base,
 			);
 			mainGroup = 229B3284203455C90098E456;
+			packageReferences = (
+				8A2413F7253636AD005B7E5C /* XCRemoteSwiftPackageReference "Quick" */,
+				8A2413FC253636E2005B7E5C /* XCRemoteSwiftPackageReference "Nimble" */,
+				8A2414012536370D005B7E5C /* XCRemoteSwiftPackageReference "OHHTTPStubs" */,
+			);
 			productRefGroup = 229B328E203455CA0098E456 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -569,7 +533,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -585,7 +550,10 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = LooLocator/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.sam.LooLocator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -604,7 +572,10 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = LooLocator/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.sam.LooLocator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -623,7 +594,11 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = LooLocatorTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.sam.LooLocatorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -642,7 +617,11 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = LooLocatorTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.sam.LooLocatorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -681,6 +660,56 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8A2413F7253636AD005B7E5C /* XCRemoteSwiftPackageReference "Quick" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Quick.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		8A2413FC253636E2005B7E5C /* XCRemoteSwiftPackageReference "Nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Nimble.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+		8A2414012536370D005B7E5C /* XCRemoteSwiftPackageReference "OHHTTPStubs" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AliSoftware/OHHTTPStubs.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8A2413F8253636AD005B7E5C /* Quick */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8A2413F7253636AD005B7E5C /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = Quick;
+		};
+		8A2413FD253636E2005B7E5C /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8A2413FC253636E2005B7E5C /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
+		};
+		8A2414022536370D005B7E5C /* OHHTTPStubsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8A2414012536370D005B7E5C /* XCRemoteSwiftPackageReference "OHHTTPStubs" */;
+			productName = OHHTTPStubsSwift;
+		};
+		8A2414042536370D005B7E5C /* OHHTTPStubs */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8A2414012536370D005B7E5C /* XCRemoteSwiftPackageReference "OHHTTPStubs" */;
+			productName = OHHTTPStubs;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 229B3285203455C90098E456 /* Project object */;
 }
