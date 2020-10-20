@@ -40,15 +40,19 @@ class ApiClientTests: QuickSpec {
                 amenityReqeust.getAmeneties(of: AmenityType.Toilets,
                                             latitude: 52.51631,
                                             longitude: 13.37777,
-                                            radius: 1000,
-                                            completionBlock: { (success, results) in
-                                                successFlag = success
-                                                if successFlag,
-                                                   let results = results as? [Location] {
-                                                    locations = results
-                                                }
-                })
-                
+                                            radius: 1000) { result in
+                    switch result {
+                        case .success(let osmData):
+                            successFlag = true
+                            if let results = osmData.elements {
+                                locations = results
+                            }
+                            break
+                    case .failure( _):
+                        successFlag = false
+                        break
+                    }
+                }
                 //Assert
                 expect(successFlag).toEventuallyNot(beFalse())
                 expect(locations).toEventuallyNot(beEmpty())

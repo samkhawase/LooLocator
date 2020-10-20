@@ -40,15 +40,19 @@ class ViewController: UIViewController {
     }
     
     fileprivate func getAmenities() {
-        viewModel.getAmenities(in: 1000, type: .Toilets) { (success, locations) in
-            guard let locations = locations as? [Location] else {
-                return
-            }
-            for location in locations {
-                print("Location.coordinate: \(location.coordinate.latitude) : \(location.coordinate.longitude)")
-                DispatchQueue.main.async { [weak self] in
-                    self?.mapView.addAnnotation(location)
+        viewModel.getAmenities(in: 1000, type: .Toilets) { [weak self] result in
+            switch result {
+            case .success(let locations):
+                for location in locations {
+                    print("Location.coordinate: \(location.coordinate.latitude) : \(location.coordinate.longitude)")
+                    DispatchQueue.main.async { [weak self] in
+                        self?.mapView.addAnnotation(location)
+                    }
                 }
+                break
+            case .failure(let error):
+                self?.showAlert(error.localizedDescription)
+                break
             }
         }
     }
@@ -70,6 +74,21 @@ class ViewController: UIViewController {
         DispatchQueue.main.async { [weak self] in
             self?.mapView.setRegion(coordinateRegion, animated: true)
         }
+    }
+    
+    fileprivate func showAlert(_ message: String){
+        let alertController = UIAlertController(title: "Loolocator Alert", message: message, preferredStyle: .alert)
+
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+
+        let OKAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(OKAction)
+        
+        DispatchQueue.main.async { [weak self] in
+            self?.present(alertController, animated: true, completion: nil)
+        }
+
     }
 }
 

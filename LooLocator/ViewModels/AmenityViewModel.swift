@@ -10,7 +10,7 @@ import CoreLocation
 
 protocol MapViewModelConfirming {
     func getCurrentLocation() -> (Double, Double)
-    func getAmenities(in range: Int, type: AmenityType, completion: @escaping CompletionBlock)
+    func getAmenities(in range: Int, type: AmenityType, completion: @escaping (Result<[Location], Error>) -> Void)
     func centerMapToCurrentLocationAction()
 }
 
@@ -51,17 +51,24 @@ class MapViewModel<S:MapViewModelObservable>: MapViewModelConfirming, LocationOb
         return (lat, lon)
     }
     
-    func getAmenities(in range: Int, type: AmenityType, completion: @escaping CompletionBlock) {
+    func getAmenities(in range: Int, type: AmenityType, completion: @escaping (Result<[Location], Error>) -> Void) {
         let (lat, lon) = getCurrentLocation()
         print("latitude: \(lat) longitude: \(lon)")
         if lat == 0 && lon == 0 {
-            completion(false, nil)
+            completion(.failure(NSError(domain: "in.b3rl.loolocator", code: 666, userInfo: nil)))
         }
         amenityRequest.getAmeneties(of: AmenityType.Toilets,
                                     latitude: lat,
                                     longitude: lon,
-                                    radius: Double(range)) { (success, locations) in
-                                        completion(success, locations)
+                                    radius: Double(range)) { result in
+            switch result {
+            case .success(let osmElement):
+                if let locations = osmElement.elements {
+                    completion(.success(locations))
+                }
+            case .failure(let error):
+                completion(.failure(error))
+            }
         }
     }
     

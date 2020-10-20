@@ -14,7 +14,7 @@ class AmenityRequest: NetworkRequestProviding {
                       latitude: Double,
                       longitude: Double,
                       radius: Double,
-                      completionBlock: @escaping CompletionBlock) {
+                      completionBlock: @escaping (Result<SerializedType, Error>) -> Void) {
         
         let amenityResource = AmenityResource(latitude: String(latitude),
                                               longitude: String(longitude),
@@ -24,31 +24,32 @@ class AmenityRequest: NetworkRequestProviding {
         guard let amenityUrlRequest = createURLRequest(from: amenityResource) else {
             return
         }
-        post(request: amenityUrlRequest) { (success, result) in
-            if success {
-                guard let result = result as? OSMData,
-                    let elements = result.elements else {
-                        completionBlock(false, nil)
-                        return
-                }
+        post(request: amenityUrlRequest, completion: completionBlock)
+//        post(request: amenityUrlRequest) { (success, result) in
+//            if success {
+//                guard let result = result as? OSMData,
+//                    let elements = result.elements else {
+//                        completionBlock(false, nil)
+//                        return
+//                }
 //                var jsonElements: [Location] = []
 //                for element in elements {
 //                    jsonElements.append(Location(jsonElement: element))
 //                }
-                completionBlock(success, elements as AnyObject)
-            }
-        }
+//                completionBlock(success, elements as AnyObject)
+//            }
+//        }
     }
     
-    func get(request: NSMutableURLRequest, completion: @escaping CompletionBlock) { }
+    func get(request: NSMutableURLRequest, completion: @escaping (Result<SerializedType, Error>) -> Void) { }
     
-    func post(request: NSMutableURLRequest, completion: @escaping CompletionBlock) {
+    func post(request: NSMutableURLRequest, completion: @escaping (Result<SerializedType, Error>) -> Void) {
         dataTask(request: request, completion: completion)
     }
     
-    func put(request: NSMutableURLRequest, completion: @escaping CompletionBlock) { }
+    func put(request: NSMutableURLRequest, completion: @escaping (Result<SerializedType, Error>) -> Void) { }
     
-    func delete(request: NSMutableURLRequest, completion: @escaping CompletionBlock) { }
+    func delete(request: NSMutableURLRequest, completion: @escaping (Result<SerializedType, Error>) -> Void) { }
     
     func createURLRequest<T>(from resource: T) -> NSMutableURLRequest? where T : ApiResourceProviding {
         

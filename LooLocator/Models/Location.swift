@@ -70,7 +70,11 @@ class Location: NSObject, Codable {
         let tagsContainer = try? container.nestedContainer(keyedBy: CodingKeys.self, forKey: .tags)
         
         self.locationDescription = try? tagsContainer?.decode(String.self, forKey: .name)
-        self.title = try? tagsContainer?.decode(String.self, forKey: .englishName)
+        if let _name = try? tagsContainer?.decode(String.self, forKey: .englishName) {
+            self.title = _name
+        } else {
+            self.title = self.locationDescription
+        }
         self.isAccessible =  ((try? tagsContainer?.decode(String.self, forKey: .wheelchair)) != nil)
     }
     

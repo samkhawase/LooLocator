@@ -13,8 +13,29 @@ class MockAmenityRequest: AmenityRequest {
                                latitude: Double,
                                longitude: Double,
                                radius: Double,
-                               completionBlock: @escaping CompletionBlock) {
-        let dummyOSMData = [Location(id: 001, title: "Dummy Amenity", locationDescription: "Dummy Amenity Name", coordintes: (52.51631, 13.37777), isAccessible: false)]
-        completionBlock(true, dummyOSMData as AnyObject)
+                               completionBlock: @escaping (Result<AmenityRequest.SerializedType, Error>) -> Void) {
+        let jsonDecoder = JSONDecoder()
+        if let jsonData = """
+            {
+                "elements": [
+                             {
+                                 "type": "node",
+                                 "id": 66917214,
+                                 "lat": 52.5168607,
+                                 "lon": 13.3829509,
+                                 "tags": {
+                                     "amenity": "toilets",
+                                     "fee": "yes",
+                                     "name": "City Toilette",
+                                     "toilets:wheelchair": "yes",
+                                     "wheelchair": "yes"
+                                }
+                            }
+                    ]
+            }
+            """.data(using: .utf8),
+           let dummyOSMData = try? jsonDecoder.decode(OSMData.self, from: jsonData) {
+            completionBlock(.success(dummyOSMData))
+        }
     }
 }

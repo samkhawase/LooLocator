@@ -7,7 +7,7 @@
 //
 import Foundation
 
-typealias CompletionBlock = (_ success: Bool, _ object: AnyObject?) -> ()
+//typealias CompletionBlock = (_ success: Bool, _ object: AnyObject?) -> ()
 
 protocol NetworkRequestProviding {
     
@@ -15,13 +15,13 @@ protocol NetworkRequestProviding {
     associatedtype SerializedType : Codable
     
     // CRUD interface
-    func get(request: NSMutableURLRequest, completion: @escaping CompletionBlock)
-    func post(request: NSMutableURLRequest, completion: @escaping CompletionBlock)
-    func put(request: NSMutableURLRequest, completion: @escaping CompletionBlock)
-    func delete(request: NSMutableURLRequest, completion: @escaping CompletionBlock)
+    func get(request: NSMutableURLRequest, completion: @escaping (Result<SerializedType, Error>) -> Void )
+    func post(request: NSMutableURLRequest, completion: @escaping (Result<SerializedType, Error>) -> Void)
+    func put(request: NSMutableURLRequest, completion: @escaping (Result<SerializedType, Error>) -> Void)
+    func delete(request: NSMutableURLRequest, completion: @escaping (Result<SerializedType, Error>) -> Void)
     
     // Internal workhorse function: implemented in default extension
-    func dataTask(request: NSMutableURLRequest, completion: @escaping CompletionBlock)
+    func dataTask(request: NSMutableURLRequest, completion: @escaping (Result<SerializedType, Error>) -> Void)
     
     // The implementor needs to implement this to provide the ApiResource that the request needs
     func createURLRequest<T: ApiResourceProviding>(from resource: T) -> NSMutableURLRequest?

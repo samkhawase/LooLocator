@@ -34,22 +34,24 @@ class MapViewModelTests: QuickSpec {
             it("should get all amenities in range", closure: {
                 var successFlag = false
                 var locations: [Location] = []
-                viewModel?.getAmenities(in: 1000, type: AmenityType.Toilets, completion: {
-                    (success, results) in
-                    successFlag = success
-                    if successFlag, let results = results as? [Location] {
-                        locations = results
+                viewModel?.getAmenities(in: 1000, type: AmenityType.Toilets) { result in
+                    switch result {
+                    case .success(let _locations):
+                        locations = _locations
+                        successFlag = true
+                    case .failure(_):
+                        successFlag = false
                     }
-                })
+                }
                 //Assert
                 expect(successFlag).toEventuallyNot(beFalse())
                 expect(locations).toEventuallyNot(beEmpty())
                 
-                expect(locations.first?.id).toEventuallyNot(equal(0))
-                expect(locations.first?.title).toEventually(equal("Dummy Amenity"))
+                expect(locations.first?.id).toEventually(equal(66917214))
+                expect(locations.first?.title).toEventually(equal("City Toilette"))
                 
-                expect(locations.first?.coordinates.0).toEventuallyNot(equal(0))
-                expect(locations.first?.coordinates.1).toEventuallyNot(equal(0))
+                expect(locations.first?.coordinates.0).toEventually(equal(52.5168607))
+                expect(locations.first?.coordinates.1).toEventually(equal(13.3829509))
             })
         }
     }
