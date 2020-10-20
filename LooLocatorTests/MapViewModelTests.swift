@@ -2,8 +2,8 @@
 //  MapViewModelTests.swift
 //  LooLocatorTests
 //
-//  Created by Sam Khawase on 23.02.18.
-//  Copyright © 2018 LooLocator. All rights reserved.
+//  Created by Sam Khawase on 23.02.20.
+//  Copyright © 2020 LooLocator. All rights reserved.
 //
 
 import XCTest
@@ -45,8 +45,7 @@ class MapViewModelTests: QuickSpec {
                 expect(successFlag).toEventuallyNot(beFalse())
                 expect(locations).toEventuallyNot(beEmpty())
                 
-                expect(locations.first?.id).toEventuallyNot(beEmpty())
-                expect(locations.first?.id).toEventually(equal("DummyLocation001"))
+                expect(locations.first?.id).toEventuallyNot(equal(0))
                 expect(locations.first?.title).toEventually(equal("Dummy Amenity"))
                 
                 expect(locations.first?.coordinates.0).toEventuallyNot(equal(0))

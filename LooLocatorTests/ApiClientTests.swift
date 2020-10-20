@@ -2,8 +2,8 @@
 //  ApiClientTests.swift
 //  LooLocatorTests
 //
-//  Created by Sam Khawase on 17.02.18.
-//  Copyright © 2018 LooLocator. All rights reserved.
+//  Created by Sam Khawase on 17.02.20.
+//  Copyright © 2020 LooLocator. All rights reserved.
 //
 
 import XCTest
@@ -43,7 +43,8 @@ class ApiClientTests: QuickSpec {
                                             radius: 1000,
                                             completionBlock: { (success, results) in
                                                 successFlag = success
-                                                if successFlag, let results = results as? [Location] {
+                                                if successFlag,
+                                                   let results = results as? [Location] {
                                                     locations = results
                                                 }
                 })
@@ -52,7 +53,7 @@ class ApiClientTests: QuickSpec {
                 expect(successFlag).toEventuallyNot(beFalse())
                 expect(locations).toEventuallyNot(beEmpty())
                 
-                expect(locations.first?.id).toEventuallyNot(beEmpty())
+                expect(locations.first?.id).toEventuallyNot(equal(0))
                 expect(locations.first?.coordinates.0).toEventuallyNot(equal(0))
                 expect(locations.first?.coordinates.1).toEventuallyNot(equal(0))
             })

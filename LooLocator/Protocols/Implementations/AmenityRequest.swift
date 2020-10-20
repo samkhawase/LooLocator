@@ -2,8 +2,8 @@
 //  AmenityRequest.swift
 //  LooLocator
 //
-//  Created by Sam Khawase on 15.02.18.
-//  Copyright © 2018 LooLocator. All rights reserved.
+//  Created by Sam Khawase on 15.02.20.
+//  Copyright © 2020 LooLocator. All rights reserved.
 //
 
 import Foundation
@@ -26,16 +26,16 @@ class AmenityRequest: NetworkRequestProviding {
         }
         post(request: amenityUrlRequest) { (success, result) in
             if success {
-                guard let result = result as? RawOSMData,
+                guard let result = result as? OSMData,
                     let elements = result.elements else {
                         completionBlock(false, nil)
                         return
                 }
-                var jsonElements: [Location] = []
-                for element in elements {
-                    jsonElements.append(Location(jsonElement: element))
-                }
-                completionBlock(success, jsonElements as AnyObject)
+//                var jsonElements: [Location] = []
+//                for element in elements {
+//                    jsonElements.append(Location(jsonElement: element))
+//                }
+                completionBlock(success, elements as AnyObject)
             }
         }
     }
@@ -68,7 +68,7 @@ class AmenityRequest: NetworkRequestProviding {
         return locationRequest
     }
     
-    typealias SerializedType = RawOSMData
+    typealias SerializedType = OSMData
     
 }
 

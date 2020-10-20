@@ -17,7 +17,6 @@
 		22801B5C2035E10C00D4C2D2 /* NetworkRequestProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22801B5B2035E10B00D4C2D2 /* NetworkRequestProviding.swift */; };
 		22801B5E2035E40A00D4C2D2 /* AmentityResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22801B5D2035E40A00D4C2D2 /* AmentityResource.swift */; };
 		22801B602035E48200D4C2D2 /* AmenityRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22801B5F2035E48200D4C2D2 /* AmenityRequest.swift */; };
-		22801B632035E4EB00D4C2D2 /* RawOSMData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22801B622035E4EB00D4C2D2 /* RawOSMData.swift */; };
 		22801B652035E59300D4C2D2 /* NetworkReqeustProvidingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22801B642035E59300D4C2D2 /* NetworkReqeustProvidingExtension.swift */; };
 		22801B672036209C00D4C2D2 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22801B662036209C00D4C2D2 /* Location.swift */; };
 		22801B692036D9D700D4C2D2 /* AmenityMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22801B682036D9D700D4C2D2 /* AmenityMocks.swift */; };
@@ -37,7 +36,6 @@
 		22D13888203A1A040077E457 /* LocationManagerConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22801B3D2035B20100D4C2D2 /* LocationManagerConfigurable.swift */; };
 		22D13889203A1A040077E457 /* NetworkRequestProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22801B5B2035E10B00D4C2D2 /* NetworkRequestProviding.swift */; };
 		22D1388A203A1A040077E457 /* ApiResourceProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22801B592035E07800D4C2D2 /* ApiResourceProviding.swift */; };
-		22D1388B203A1A080077E457 /* RawOSMData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22801B622035E4EB00D4C2D2 /* RawOSMData.swift */; };
 		22D1388C203A1A080077E457 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22801B662036209C00D4C2D2 /* Location.swift */; };
 		22D1388D203A1A2A0077E457 /* AmenityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229B32B9203459660098E456 /* AmenityViewModel.swift */; };
 		22D13890203AD0D30077E457 /* LocationProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229B32A5203455CA0098E456 /* LocationProviderTests.swift */; };
@@ -45,6 +43,7 @@
 		22D13893204022E70077E457 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229B3292203455CA0098E456 /* ViewController.swift */; };
 		22D13895204023640077E457 /* MockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D13894204023640077E457 /* MockViewController.swift */; };
 		22D138972040269C0077E457 /* MapViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D138962040269C0077E457 /* MapViewModelTests.swift */; };
+		8A048946253F41EA00037931 /* OSMModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A048945253F41EA00037931 /* OSMModelTests.swift */; };
 		8A2413F9253636AD005B7E5C /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 8A2413F8253636AD005B7E5C /* Quick */; };
 		8A2413FE253636E2005B7E5C /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 8A2413FD253636E2005B7E5C /* Nimble */; };
 		8A2414032536370D005B7E5C /* OHHTTPStubsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8A2414022536370D005B7E5C /* OHHTTPStubsSwift */; };
@@ -72,7 +71,6 @@
 		22801B5B2035E10B00D4C2D2 /* NetworkRequestProviding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequestProviding.swift; sourceTree = "<group>"; };
 		22801B5D2035E40A00D4C2D2 /* AmentityResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmentityResource.swift; sourceTree = "<group>"; };
 		22801B5F2035E48200D4C2D2 /* AmenityRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmenityRequest.swift; sourceTree = "<group>"; };
-		22801B622035E4EB00D4C2D2 /* RawOSMData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawOSMData.swift; sourceTree = "<group>"; };
 		22801B642035E59300D4C2D2 /* NetworkReqeustProvidingExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReqeustProvidingExtension.swift; sourceTree = "<group>"; };
 		22801B662036209C00D4C2D2 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		22801B682036D9D700D4C2D2 /* AmenityMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmenityMocks.swift; sourceTree = "<group>"; };
@@ -98,6 +96,7 @@
 		22D13891203C94AB0077E457 /* berlin.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = berlin.gpx; sourceTree = SOURCE_ROOT; };
 		22D13894204023640077E457 /* MockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewController.swift; sourceTree = "<group>"; };
 		22D138962040269C0077E457 /* MapViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModelTests.swift; sourceTree = "<group>"; };
+		8A048945253F41EA00037931 /* OSMModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSMModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,7 +192,6 @@
 		22801B612035E4D500D4C2D2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				22801B622035E4EB00D4C2D2 /* RawOSMData.swift */,
 				22801B662036209C00D4C2D2 /* Location.swift */,
 			);
 			path = Models;
@@ -242,6 +240,7 @@
 				229B32A7203455CA0098E456 /* Info.plist */,
 				22D1387C20386A2A0077E457 /* ApiClientTests.swift */,
 				22D138962040269C0077E457 /* MapViewModelTests.swift */,
+				8A048945253F41EA00037931 /* OSMModelTests.swift */,
 			);
 			path = LooLocatorTests;
 			sourceTree = "<group>";
@@ -379,7 +378,6 @@
 			files = (
 				22801B5E2035E40A00D4C2D2 /* AmentityResource.swift in Sources */,
 				22801B5C2035E10C00D4C2D2 /* NetworkRequestProviding.swift in Sources */,
-				22801B632035E4EB00D4C2D2 /* RawOSMData.swift in Sources */,
 				229B3293203455CA0098E456 /* ViewController.swift in Sources */,
 				22801B3E2035B20100D4C2D2 /* LocationManagerConfigurable.swift in Sources */,
 				229B32BC203460AE0098E456 /* LocationProvider.swift in Sources */,
@@ -408,13 +406,13 @@
 				22D13887203A1A040077E457 /* LocationProvidable.swift in Sources */,
 				22D1388A203A1A040077E457 /* ApiResourceProviding.swift in Sources */,
 				22801B692036D9D700D4C2D2 /* AmenityMocks.swift in Sources */,
-				22D1388B203A1A080077E457 /* RawOSMData.swift in Sources */,
 				22D1387D20386A2A0077E457 /* ApiClientTests.swift in Sources */,
 				22D13884203A19FE0077E457 /* AmentityResource.swift in Sources */,
 				22D13893204022E70077E457 /* ViewController.swift in Sources */,
 				22D13895204023640077E457 /* MockViewController.swift in Sources */,
 				22D13888203A1A040077E457 /* LocationManagerConfigurable.swift in Sources */,
 				22D13882203A19450077E457 /* AmenityRequest.swift in Sources */,
+				8A048946253F41EA00037931 /* OSMModelTests.swift in Sources */,
 				22D13883203A19FE0077E457 /* LocationProvider.swift in Sources */,
 				22D13885203A1A040077E457 /* CLLocationManagerExtension.swift in Sources */,
 			);

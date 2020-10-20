@@ -2,8 +2,8 @@
 //  NetworkRequest.swift
 //  LooLocator
 //
-//  Created by Sam Khawase on 15.02.18.
-//  Copyright © 2018 LooLocator. All rights reserved.
+//  Created by Sam Khawase on 15.02.20.
+//  Copyright © 2020 LooLocator. All rights reserved.
 //
 import Foundation
 
