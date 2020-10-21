@@ -20,11 +20,12 @@ class LocationProviderTests: QuickSpec {
                 let locationProvider: LocationProvidable = LocationProvider(locationManager: mockLocationManager)
                 beforeEach {
                     mockLocationManager.callCount = 0
+                    // Arrange
+                    locationProvider.setListener(listener: mockLocationObservable)
+                    //Act
+                    locationProvider.startLocationUpdates()
                 }
                 it("then starts location updates", closure: {
-                    locationProvider.setListener(listener: mockLocationObservable)
-                    // Act
-                    locationProvider.startLocationUpdates()
                     //Assert
                     expect(mockLocationManager.callCount).toEventually(equal(4))
                     expect(mockLocationObservable.coordinates).toEventuallyNot(beNil())
@@ -32,7 +33,7 @@ class LocationProviderTests: QuickSpec {
                     expect(mockLocationObservable.coordinates?.1).toEventually(equal(13.37777))
                 })
                 
-                it("then provides current location", closure: {
+                it("then provides current location", closure: {                    
                     // Act
                     let (lat, lon) = locationProvider.getCurrentLocation()
                     //Assert
